@@ -14,7 +14,7 @@ if st.sidebar.button("🗑️ Hapus Riwayat Chat"):
     st.session_state[f"messages_{model}"] = []
 
 # ---------- TITLE ----------
-st.title("🤖 Kenan AI Chatbot Bubble Style")
+st.title("🤖 Kenan AI - Chatbot Bubble Style")
 st.caption("Masukan OpenRouter API untuk mencoba layanan ini")
 
 # ---------- SESSION STATE ----------
@@ -87,6 +87,7 @@ if st.session_state[f"messages_{model}"]:
     ])
 
     st.download_button("📥 Unduh Riwayat Chat", data=chat_text, file_name="riwayat_chat.txt", mime="text/plain")
+
 
 
 
