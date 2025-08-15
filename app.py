@@ -26,7 +26,7 @@ def get_openrouter_response(user_message, model, temperature=0.7):
     headers = {
         "Authorization": f"Bearer {api_key}",
         # "HTTP-Referer": "https://yourdomain.com",  # ganti sesuai domain kamu
-        "X-Title": "AI Chatbot Streamlit"
+        "X-Title": "Kenan AI - Chatbot"
     }
 
     payload = {
@@ -87,3 +87,4 @@ if st.session_state[f"messages_{model}"]:
     ])
 
     st.download_button("📥 Unduh Riwayat Chat", data=chat_text, file_name="riwayat_chat.txt", mime="text/plain")
+
