@@ -3,6 +3,20 @@ import requests
 import time
 from io import StringIO
 from textblob import TextBlob
+
+st.set_page_config(page_title="Kenan AI", page_icon="🤖", layout="wide")
+
+# CSS untuk menyembunyikan logo GitHub (ikon kanan atas)
+hide_github_icon = """
+    <style>
+       .st-emotion-cache-1p1m4ay{
+            visibility: hidden;
+        }
+    </style>
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
+
 # ---------- SIDEBAR ----------
 st.sidebar.title("⚙️ Pengaturan")
 api_key = st.sidebar.text_input("🔑 OpenRouter API Key", type="password")
@@ -87,6 +101,7 @@ if st.session_state[f"messages_{model}"]:
     ])
 
     st.download_button("📥 Unduh Riwayat Chat", data=chat_text, file_name="riwayat_chat.txt", mime="text/plain")
+
 
 
 
